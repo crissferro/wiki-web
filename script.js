@@ -1,7 +1,4 @@
-/* var nombre = prompt("¿Cuál es tu nombre?");
-alert("¡Hola, " + nombre + "!");*/
-
-
+/* sirve para que los card tengan una animacion */
 const cards = document.querySelectorAll(".card");
 
 cards.forEach(card => {
@@ -20,3 +17,8 @@ function stopRotate(event) {
   const card = this;
   card.style.transform = "rotate(0)";
 }
+
+/* se utiliza para que tome el año automaticamente en el footer */
+const yearSpan = document.getElementById('year');
+const currentYear = new Date().getFullYear();
+yearSpan.textContent = currentYear;
